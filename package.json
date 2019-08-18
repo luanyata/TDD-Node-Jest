@@ -1,0 +1,40 @@
+{
+  "name": "tdd-rocketseat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js --ignore __tests__",
+    "pretest": "NODE_ENV=test sequelize db:migrate",
+    "test": "NODE_ENV=test jest",
+    "posttest": "NODE_ENV=test sequelize db:migrate:undo:all"
+  },
+  "keywords": [
+    "TDD",
+    "Jest",
+    "Node",
+    "Sequelize",
+    "Migrate",
+    "SQLite",
+    "Mysql"
+  ],
+  "author": "Luan Lima <luanyata@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.15.1"
+  },
+  "devDependencies": {
+    "factory-girl": "^5.0.4",
+    "faker": "^4.1.0",
+    "nodemon": "^1.19.1",
+    "sequelize-cli": "^5.5.0",
+    "sqlite3": "^4.1.0",
+    "supertest": "^4.0.2"
+  }
+}
